@@ -1,6 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+    createBrowserRouter,
+    RouterProvider,
+    Route,
+    createRoutesFromElements,
+} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import App from "./App.tsx";
@@ -22,74 +27,45 @@ import GivingMessageSection from "./components/Giving/GivingMessageSection.tsx";
 import GivingMyProfile from "./components/Giving/GivingMyProfile.tsx";
 
 const router = createBrowserRouter(
-    [
-        {
-            path: "/",
-            element: <App />,
-        },
-        {
-            path: "/home",
-            element: <HomePage />,
-        },
-        {
-            path: "/signup-choice",
-            element: <UserTypePage />,
-        },
-        {
-            path: "/give-signup",
-            element: <GiveSignUpPage />,
-        },
-        {
-            path: "/seek-signup",
-            element: <SeekSignUpPage />,
-        },
-        {
-            path: "/login",
-            element: <LoginPage />,
-        },
-
-        {
-            path: "/seeking-dashboard",
-            element: <ScrollList />,
-        },
-        {
-            path: "/seeking-dashboard-profile",
-            element: <ProfileInfo />,
-        },
-
-        {
-            path: "/seeking-peer-support",
-            element: <PeerScrollList />,
-        },
-        {
-            path: "/seeking-peer-support-profile",
-            element: <PeerProfileInfo />,
-        },
-
-        {
-            path: "/seeking-messages",
-            element: <SeekingMessageScroll />,
-        },
-        {
-            path: "/seeking-messages-profile",
-            element: <SeekingMessageSection />,
-        },
-
-        {
-            path: "/giving-my-clients",
-            element: <GivingMessageScroll />,
-        },
-        {
-            path: "/giving-messages-profile",
-            element: <GivingMessageSection />,
-        },
-        {
-            path: "/giving-my-profile",
-            element: <GivingMyProfile />,
-        },
-    ],
+    createRoutesFromElements(
+        <>
+            <Route path="/" element={<App />} />
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/signup-choice" element={<UserTypePage />} />
+            <Route path="/give-signup" element={<GiveSignUpPage />} />
+            <Route path="/seek-signup" element={<SeekSignUpPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/seeking-dashboard" element={<ScrollList />} />
+            <Route
+                path="/seeking-dashboard-profile"
+                element={<ProfileInfo />}
+            />
+            <Route path="/seeking-peer-support" element={<PeerScrollList />} />
+            <Route
+                path="/seeking-peer-support-profile"
+                element={<PeerProfileInfo />}
+            />
+            <Route
+                path="/seeking-messages"
+                element={<SeekingMessageScroll />}
+            />
+            <Route
+                path="/seeking-messages-profile"
+                element={<SeekingMessageSection />}
+            />
+            <Route
+                path="/giving-my-clients"
+                element={<GivingMessageScroll />}
+            />
+            <Route
+                path="/giving-messages-profile"
+                element={<GivingMessageSection />}
+            />
+            <Route path="/giving-my-profile" element={<GivingMyProfile />} />
+        </>
+    ),
     {
-        basename: "/safespace",
+        basename: "/safespace", // ✅ Place it here instead
     }
 );
 
