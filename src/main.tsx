@@ -21,72 +21,77 @@ import GivingMessageScroll from "./components/Giving/GivingMessageScroll.tsx";
 import GivingMessageSection from "./components/Giving/GivingMessageSection.tsx";
 import GivingMyProfile from "./components/Giving/GivingMyProfile.tsx";
 
-const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <App />,
-    },
-    {
-        path: "/home",
-        element: <HomePage />,
-    },
-    {
-        path: "/signup-choice",
-        element: <UserTypePage />,
-    },
-    {
-        path: "/give-signup",
-        element: <GiveSignUpPage />,
-    },
-    {
-        path: "/seek-signup",
-        element: <SeekSignUpPage />,
-    },
-    {
-        path: "/login",
-        element: <LoginPage />,
-    },
+const router = createBrowserRouter(
+    [
+        {
+            path: "/",
+            element: <App />,
+        },
+        {
+            path: "/home",
+            element: <HomePage />,
+        },
+        {
+            path: "/signup-choice",
+            element: <UserTypePage />,
+        },
+        {
+            path: "/give-signup",
+            element: <GiveSignUpPage />,
+        },
+        {
+            path: "/seek-signup",
+            element: <SeekSignUpPage />,
+        },
+        {
+            path: "/login",
+            element: <LoginPage />,
+        },
 
-    {
-        path: "/seeking-dashboard",
-        element: <ScrollList />,
-    },
-    {
-        path: "/seeking-dashboard-profile",
-        element: <ProfileInfo />,
-    },
+        {
+            path: "/seeking-dashboard",
+            element: <ScrollList />,
+        },
+        {
+            path: "/seeking-dashboard-profile",
+            element: <ProfileInfo />,
+        },
 
-    {
-        path: "/seeking-peer-support",
-        element: <PeerScrollList />,
-    },
-    {
-        path: "/seeking-peer-support-profile",
-        element: <PeerProfileInfo />,
-    },
+        {
+            path: "/seeking-peer-support",
+            element: <PeerScrollList />,
+        },
+        {
+            path: "/seeking-peer-support-profile",
+            element: <PeerProfileInfo />,
+        },
 
-    {
-        path: "/seeking-messages",
-        element: <SeekingMessageScroll />,
-    },
-    {
-        path: "/seeking-messages-profile",
-        element: <SeekingMessageSection />,
-    },
+        {
+            path: "/seeking-messages",
+            element: <SeekingMessageScroll />,
+        },
+        {
+            path: "/seeking-messages-profile",
+            element: <SeekingMessageSection />,
+        },
 
+        {
+            path: "/giving-my-clients",
+            element: <GivingMessageScroll />,
+        },
+        {
+            path: "/giving-messages-profile",
+            element: <GivingMessageSection />,
+        },
+        {
+            path: "/giving-my-profile",
+            element: <GivingMyProfile />,
+        },
+    ],
     {
-        path: "/giving-my-clients",
-        element: <GivingMessageScroll />,
-    },
-    {
-        path: "/giving-messages-profile",
-        element: <GivingMessageSection />,
-    },
-    {
-        path: "/giving-my-profile",
-        element: <GivingMyProfile />,
-    },
-]);
+        basename: "/safespace",
+    }
+);
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
