@@ -1,0 +1,9 @@
+.banner-text-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px 0px 0px;
+    background-color: #c3b1ff;
+    color: white;
+}

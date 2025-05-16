@@ -1,0 +1,32 @@
+#list-group {
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    border-radius: 0px;
+    background-color: #f9f9fb;
+}
+
+#list-group::-webkit-scrollbar {
+    display: none;
+}
+
+.list-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.list-item:hover {
+    transform: scale(1.002);
+    background-color: #eef6f8;
+    cursor: pointer;
+}
+
+.supporter-profile-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}

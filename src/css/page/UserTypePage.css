@@ -1,0 +1,69 @@
+.user-options {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 80px);
+    overflow: hidden;
+}
+
+.user-seek,
+.user-give {
+    background-color: #e7e7e7;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+    padding: 2rem;
+}
+
+.user-seek:hover,
+.user-give:hover {
+    background-color: #cadbb0;
+}
+
+.give-img,
+.seek-img {
+    height: 30vw;
+    max-height: 280px;
+    padding: 20px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.user-seek:hover .seek-img,
+.user-give:hover .give-img {
+    transform: scale(1.05);
+}
+
+.give-help-text,
+.seek-help-text {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .user-options {
+        flex-direction: column;
+    }
+
+    .user-seek,
+    .user-give {
+        height: 50%;
+    }
+
+    .give-img,
+    .seek-img {
+        height: 40vw;
+        max-height: none;
+    }
+
+    .give-help-text,
+    .seek-help-text {
+        font-size: 1.6rem;
+    }
+}
