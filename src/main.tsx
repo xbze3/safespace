@@ -65,7 +65,7 @@ const router = createBrowserRouter(
         </>
     ),
     {
-        basename: "/safespace", // ✅ Place it here instead
+        basename: "/safespace",
     }
 );
 
